@@ -2,9 +2,12 @@ package p01review;
 
 public class C02Polymorphism {
 	// 다형성
+	
+	// 1.상위 타입으로 자동변환(값 할당)
+	// 2.실행되는 메서드는 실제 인스턴스가 실행
 	public static void main(String[] args) {
 		Animal a1 = new Animal();
-		Cat c1  = new Cat();
+		Cat c1  = new Cat();	//Cat이라는 인스턴스를 생성, Cat인스턴스 데이터 타입의 c1변수에 저장 
 		Dog d1 = new Dog();
 		
 		a1.cry();
@@ -13,16 +16,13 @@ public class C02Polymorphism {
 		
 		System.out.println("=========================");
 		
-		Animal a2 = c1;
+		Animal a2 = c1;	// Animal인스턴스 타입의 a2는 c1을 할당 받는다. 즉 a2는 Cat인스턴스를 할당 받는다.
 		Animal a3 = d1;
 		
 		a2.cry();
 		a3.cry();
 	}
-
 }
-
-
 
 class Animal{
 	
