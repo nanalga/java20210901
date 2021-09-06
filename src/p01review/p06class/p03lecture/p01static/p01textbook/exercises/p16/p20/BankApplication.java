@@ -4,7 +4,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class BankApplication {
-	private static Account[] acountArray = new Account[100];
+	//Account객체를 아이템으로 가질수 있음
+	//참조타입이 아이템일 경우 null로 초기화됨
+	private static Account[] acountArray = new Account[100];	
+	//선생님 private static size = 0;
 	private static Scanner scan = new Scanner(System.in);
 	
 	public static void main(String[] args) {
@@ -26,8 +29,9 @@ public class BankApplication {
 			} else if(sectNum == 4) {
 				withdraw();
 			} else if(sectNum == 5) {
+//				run = false;
 				System.exit(0);
-				System.out.println("종료되었습니다.");
+//				System.out.println("종료되었습니다.");
 			}
 		}
 	}
@@ -47,6 +51,8 @@ public class BankApplication {
 		int balance = scan.nextInt();
 		
 		Account ac = new Account(ano, owner, balance);
+		//선생님 accountArray[size] = ac;
+		//선생님 size++;
 		
 		for(int i = 0; i <acountArray.length; i++) {
 			if(acountArray[i] == null) {
@@ -69,6 +75,7 @@ public class BankApplication {
 				System.out.println(ac.getAno() + "\t" + ac.getOwner() + "\t" + ac.getBalance());
 			}
 		}
+		System.out.println("결과 : 계좌가 생성되었습니다.");
 	}
 	
 	//예금하기
@@ -87,6 +94,8 @@ public class BankApplication {
 
 		int addBalance = ac.getBalance() + balance;
 		ac.setBalance(addBalance);
+		
+		System.out.println("결과 : 예금이 성공되었습니다.");
 								
 	}	
 	//출금하기
@@ -106,17 +115,18 @@ public class BankApplication {
 		
 		int minusBalance = ac.getBalance() - balance;
 		ac.setBalance(minusBalance);
+		
+		System.out.println("결과 : 출금이 성공되었습니다.");
 	}
 	
 	//Account 배열에서 ano와 동일한 Account 객체 착기
 	private static Account findAcount(String ano) {
 		Account ac = new Account();
-		for(int i = 0; i < acountArray.length; i++) {
-			if(acountArray[i].getAno().equals(ano)) {
+		for(int i = 0; i < acountArray.length; i++) {	//선생님 accountArray.length -> size.length
+			if(acountArray[i].getAno().equals(ano)) {	//accountArray의 ano와 입력받은 ano비교 
 				ac = acountArray[i];
 				break;
 			}
-			
 		}
 		//System.out.println(ac.getAno());
 		return ac;
