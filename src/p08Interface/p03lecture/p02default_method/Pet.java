@@ -1,0 +1,10 @@
+package p08Interface.p03lecture.p02default_method;
+
+public interface Pet {
+	
+	void sit();
+	default void roll() {	//항상 public 
+		System.out.println("구릅니다.");
+	}
+
+}
