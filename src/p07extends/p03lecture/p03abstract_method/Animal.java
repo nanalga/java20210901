@@ -8,6 +8,4 @@ public abstract class Animal {
 	public void walk() {
 		System.out.println("네발로 걷는다.");
 	}
-
-
 }

@@ -6,7 +6,6 @@ public class Dog extends Animal {
 	 * 하위클래스가 실제 클래스일 때
 	 * 꼭 추상 메서드를 재정의 해야함
 	 */
-	
 	@Override
 	public void sound() {
 		System.out.println("멍멍");
