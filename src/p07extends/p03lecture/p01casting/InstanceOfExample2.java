@@ -1,5 +1,7 @@
 package p07extends.p03lecture.p01casting;
 
+import p11api.p110503.Cat;
+
 public class InstanceOfExample2 {
 	public static void main(String[] args) {
 		Animal a1 = new Animal();
