@@ -1,6 +1,30 @@
 package p99codingbat;
 
 public class Warmup1 {
+	public boolean in3050(int a, int b) {
+
+		if ((a >= 30 && a <= 40 && b >= 30 && b <= 40)) {
+			return true;
+		} else if ((a >= 40 && a <= 50 && b >= 40 && b <= 50)) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean stringE(String str) {
+		// return java.util.regex.Pattern.matches("[^e]*e[^e]*e?[^e]*e?[^e]*", str);
+
+		int count = 0;
+
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == 'e') {
+				count++;
+			}
+
+		}
+		return count >= 1 && count <= 3;
+	}
+	
 	public int intMax(int a, int b, int c) {
 		int max = 0;
 
@@ -27,18 +51,13 @@ public class Warmup1 {
 	}
 	
 	public boolean mixStart(String str) {
+		// return java.util.regex.Pattern.matches(".ix.*",str);
 
-		if (str.length() < 3) {
-			return false;
+		if (str.length() >= 3) {
+			String sub = str.substring(1, 3);
+			return sub.equals("ix");
 		}
-
-		String two = str.substring(1, 3);
-
-		if (two.equals("ix")) {
-			return true;
-		} else {
-			return false;
-		}
+		return false;
 
 	}
 
