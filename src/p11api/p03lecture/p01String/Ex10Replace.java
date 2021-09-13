@@ -16,3 +16,7 @@ public class Ex10Replace {
 		System.out.println(r2);
 	}
 }
+
+
+
+

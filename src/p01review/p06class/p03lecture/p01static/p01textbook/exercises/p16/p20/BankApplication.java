@@ -70,10 +70,12 @@ public class BankApplication {
 		System.out.println("---------------------------");
 		
 		for(int i =0; i < acountArray.length; i++) {
+			
 			Account ac = acountArray[i];
 			if(ac != null) {
 				System.out.println(ac.getAno() + "\t" + ac.getOwner() + "\t" + ac.getBalance());
 			}
+			
 		}
 		System.out.println("결과 : 계좌가 생성되었습니다.");
 	}

@@ -1,10 +1,10 @@
-package p01review.p06class.p03lecture.p01static.p01textbook.exercises.p16.p20;
+package p11api.p03lecture.p03object.p01toString;
 
 public class Account {
 	private String ano;
 	private String owner;
 	private int balance;
-	
+
 	public Account() {
 		
 	}
@@ -15,29 +15,27 @@ public class Account {
 		this.balance = balance;
 	}
 	
+	public String getAno() {
+		return ano;
+	}
 	public void setAno(String ano) {
 		this.ano = ano;
-	}
-	public String getAno() {
-		return this.ano;
-	}
-	
-	public void setOwner(String owner) {
-		this.owner = owner;
 	}
 	public String getOwner() {
 		return owner;
 	}
-	public void setBalance(int balance) {
-		this.balance = balance;
+	public void setOwner(String owner) {
+		this.owner = owner;
 	}
 	public int getBalance() {
 		return balance;
 	}
-	
-	public String toString() {
-		return "계좌번호 : " + this.ano + ", 예금주 : " + this.owner + ", 금액 : " + this.balance;
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
 	
-
+	public String toString() {
+		return "계좌번호: "+this.ano+ ", 계좌주 : " +this.owner+ ", 잔액 : "+this.balance+"원";
+	}
+	
 }

@@ -12,11 +12,11 @@ public class Ex11Split {
 		}
 		System.out.println("=======================================");
 		
-		String s2 = "bts jin rm v jk suga";
-		
-		String[] arr2 = s2.split(" ");
-		for(String item : arr2) {
-			System.out.println(item);
-		}
+//		String s2 = "bts jin rm v jk suga";
+//		
+//		String[] arr2 = s2.split(" ");
+//		for(String item : arr2) {
+//			System.out.println(item);
+//		}
 	}
 }
