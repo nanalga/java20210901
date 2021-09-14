@@ -1,6 +1,37 @@
 package p99codingbat;
 
 public class Warmup1 {
+	
+	public static String everyNth(String str, int n) {
+		String result = "";
+		for (int i = 0; i < str.length(); i = i + n) { // 0, 0+2=2,
+			result += str.charAt(i);
+		}
+		return result;
+
+	}
+	
+	public String endUp(String str) {
+
+		if (str.length() < 3) {
+			return str.toUpperCase();
+		}
+
+		String frontSub = str.substring(0, str.length() - 3);
+		String backSub = str.substring(str.length() - 3, str.length());
+		String backUpper = backSub.toUpperCase();
+
+		return frontSub + backUpper;
+	}
+	
+	public boolean lastDigit(int a, int b) {
+
+		if ((b % 10 == a) || (a % 10 == b)) {
+			return true;
+		}
+		return false;
+	}
+	
 	public boolean in3050(int a, int b) {
 
 		if ((a >= 30 && a <= 40 && b >= 30 && b <= 40)) {
