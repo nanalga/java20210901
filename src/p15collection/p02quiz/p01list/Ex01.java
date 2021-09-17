@@ -1,4 +1,4 @@
-package p15collection.p02quiz;
+package p15collection.p02quiz.p01list;
 
 import java.util.ArrayList;
 import java.util.List;
