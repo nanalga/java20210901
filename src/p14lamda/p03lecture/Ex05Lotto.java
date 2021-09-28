@@ -1,9 +1,9 @@
-package p14lamda.p02quiz;
+package p14lamda.p03lecture;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Ex04Lotto {
+public class Ex05Lotto {
 	public static void main(String[] args) {
 		Set<Integer> lotto1 = getNumbers(() -> (int)(Math.random()*45)+1);
 		System.out.println(lotto1);

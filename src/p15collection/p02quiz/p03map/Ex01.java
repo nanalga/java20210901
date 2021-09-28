@@ -8,6 +8,5 @@ public class Ex01 {
 		// 1:2, 2:4
 		map.put(1, 2);
 		map.put(2, 4);
-
 	}
 }
